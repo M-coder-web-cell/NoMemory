@@ -14,7 +14,7 @@ class LLMClient:
         self.client = anthropic.Anthropic(api_key=api_key)
         self.max_tokens = max_tokens
         self.thinking_budget = thinking_budget
-        model: str = model
+        self.model = model
 
     def ask(
         self,
