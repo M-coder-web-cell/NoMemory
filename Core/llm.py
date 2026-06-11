@@ -8,12 +8,13 @@ class LLMClient:
         self,
         api_key: str,
         max_tokens: int = 4000,
+        model: str = "claude-haiku-4-5-20251001",
         thinking_budget: Optional[int] = None,
     ):
         self.client = anthropic.Anthropic(api_key=api_key)
         self.max_tokens = max_tokens
         self.thinking_budget = thinking_budget
-        self.model = "test"
+        model: str = model
 
     def ask(
         self,
